@@ -85,7 +85,7 @@ export default function SplitPage() {
 
       // Save and trigger download
       const newPdfBytes = await newPdf.save();
-      const blob = new Blob([newPdfBytes], { type: "application/pdf" });
+      const blob = new Blob([newPdfBytes as any], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;

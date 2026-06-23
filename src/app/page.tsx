@@ -117,7 +117,7 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
             >
               {section.tools.map((tool) => (
-                <motion.div key={tool.title} variants={itemVariants}>
+                <motion.div key={tool.title} variants={itemVariants as any}>
                   <Link
                     href={tool.href}
                     className="group flex flex-col h-full p-6 bg-[#1e1f20] rounded-2xl border border-white/5 hover:border-[#8ab4f8]/50 hover:bg-[#282a2c] transition-all duration-300 relative overflow-hidden"

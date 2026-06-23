@@ -90,7 +90,7 @@ export default function CompressPage() {
 
       const compressedBytes = await compressedPdf.save({ useObjectStreams: true });
 
-      const blob = new Blob([compressedBytes as BlobPart], { type: "application/pdf" });
+      const blob = new Blob([compressedBytes as any], { type: "application/pdf" });
       const downloadUrl = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = downloadUrl;
