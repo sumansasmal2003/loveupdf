@@ -41,7 +41,7 @@ export default function RepairPage() {
       // Saving it rebuilds the entire file structure from scratch
       const repairedBytes = await pdfDoc.save({ useObjectStreams: false });
 
-      const blob = new Blob([repairedBytes], { type: "application/pdf" });
+      const blob = new Blob([repairedBytes as any], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");

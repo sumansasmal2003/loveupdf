@@ -36,7 +36,7 @@ export default function FileUploader({
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      {...getRootProps()}
+      {...(getRootProps() as any)}
       className={`flex flex-col items-center justify-center w-full h-64 p-6 border-2 border-dashed rounded-2xl cursor-pointer transition-colors duration-200 ${
         isDragActive
           ? "border-[#8ab4f8] bg-[#8ab4f8]/10"

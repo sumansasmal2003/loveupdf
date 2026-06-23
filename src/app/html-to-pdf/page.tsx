@@ -51,7 +51,7 @@ export default function HtmlToPdfPage() {
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
       };
 
-      await html2pdf().set(opt).from(element).save();
+      await html2pdf().set(opt as any).from(element).save();
       document.body.removeChild(element);
     } catch (error) {
       alert("Failed to render HTML. Check syntax.");
